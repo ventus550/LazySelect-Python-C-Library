@@ -73,7 +73,7 @@ Select(PyObject* self, PyObject* args) {
 	}
 
 	Py_ssize_t n = PyList_Size(pList);	
-	if (k < 0 || k >= n) {
+	if (k < 1 || k > n) {
 		PyErr_SetString(PyExc_ValueError, "given position is out of range");
 		return NULL;
 	}
