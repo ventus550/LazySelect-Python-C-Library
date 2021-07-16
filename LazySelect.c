@@ -71,10 +71,9 @@ Select(PyObject* self, PyObject* args) {
 		PyErr_SetString(PyExc_TypeError, "arguments must be a python list followed by an integer");
 		return NULL;
 	}
-	k += 1;
 
 	Py_ssize_t n = PyList_Size(pList);	
-	if (k < 1 || k > n) {
+	if (k < 0 || k >= n) {
 		PyErr_SetString(PyExc_ValueError, "given position is out of range");
 		return NULL;
 	}
