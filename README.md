@@ -12,4 +12,4 @@ from LazySelect import select
 print( select([2, 3, 1, 4, 13, 8], 3) )
 ```
 
-This will print out the 3rd smallest element in the list.
+This will print out the 4th smallest element in the list.
